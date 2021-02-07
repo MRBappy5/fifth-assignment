@@ -1,0 +1,12 @@
+body {
+    background-color: #EDD163;
+}
+h1{
+    margin-top: 20px;
+    text-align: center;
+}
+  
+#show-result{
+    display: none ;
+    width: 450px;
+}
