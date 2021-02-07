@@ -7,7 +7,7 @@ button.addEventListener('click', (event) => {
     const user = document.getElementById('inputForSearch').value;
     loadData(user);
 });
- 
+
 function loadData(user) {
     let url = "";
     if (user.length === 1) {
@@ -41,7 +41,7 @@ const displayData = data => {
                 <img class="card-img-top" src="${element.strMealThumb}"/>
                 <div class="card-body">
                     <h5 class="card-title mx-auto">${element.strMeal}</h5>
-                    <button onclick="displayMealDetails('${element.strMeal}')">Details...</button>
+                    <button onclick="displayMealInfo('${element.strMeal}')">Details</button>
                 </div>
             </div>
         </div> `;
@@ -51,14 +51,12 @@ const displayData = data => {
     });
 }
 
-const displayMealDetails = (string) => {
+const displayMealInfo = (string) => {
 
     url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${string}`;
     fetch(url)
         .then(res => res.json())
         .then(data => {
-
-            console.log('JUST STRING NAME : ', string);
 
             showResult.style.display = "block"
             const div = document.createElement('div');
