@@ -86,5 +86,4 @@ const displayMealInfo = (string) => {
             div.innerHTML = mealInfo;
             showResult.appendChild(div);
         });
-    showResult.innerHTML = null;
 }
